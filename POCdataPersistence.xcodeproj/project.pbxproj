@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		562D2B912554816000F8E651 /* Mandala+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562D2B8F2554816000F8E651 /* Mandala+CoreDataClass.swift */; };
+		562D2B922554816000F8E651 /* Mandala+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562D2B902554816000F8E651 /* Mandala+CoreDataProperties.swift */; };
 		56B1336A25533643001575B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B1336925533643001575B5 /* AppDelegate.swift */; };
 		56B1336C25533643001575B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B1336B25533643001575B5 /* SceneDelegate.swift */; };
 		56B1336E25533643001575B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B1336D25533643001575B5 /* ViewController.swift */; };
@@ -20,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		562D2B8F2554816000F8E651 /* Mandala+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mandala+CoreDataClass.swift"; sourceTree = "<group>"; };
+		562D2B902554816000F8E651 /* Mandala+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mandala+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		562D2B982554857200F8E651 /* Model 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 2.xcdatamodel"; sourceTree = "<group>"; };
 		56B1336625533643001575B5 /* POCdataPersistence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = POCdataPersistence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56B1336925533643001575B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56B1336B25533643001575B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +71,8 @@
 		56B1336825533643001575B5 /* POCdataPersistence */ = {
 			isa = PBXGroup;
 			children = (
+				562D2B8F2554816000F8E651 /* Mandala+CoreDataClass.swift */,
+				562D2B902554816000F8E651 /* Mandala+CoreDataProperties.swift */,
 				56FCF32E2554783400B2A9CC /* CoreDataDAO.swift */,
 				56B1336925533643001575B5 /* AppDelegate.swift */,
 				56B1336B25533643001575B5 /* SceneDelegate.swift */,
@@ -158,6 +165,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				562D2B922554816000F8E651 /* Mandala+CoreDataProperties.swift in Sources */,
+				562D2B912554816000F8E651 /* Mandala+CoreDataClass.swift in Sources */,
 				56B1336E25533643001575B5 /* ViewController.swift in Sources */,
 				56B1338225533707001575B5 /* Form.swift in Sources */,
 				AD412CE225546693001D1CE3 /* POCdataPersistence.xcdatamodeld in Sources */,
@@ -372,6 +381,7 @@
 		AD412CE025546693001D1CE3 /* POCdataPersistence.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				562D2B982554857200F8E651 /* Model 2.xcdatamodel */,
 				AD412CE125546693001D1CE3 /* Model.xcdatamodel */,
 			);
 			currentVersion = AD412CE125546693001D1CE3 /* Model.xcdatamodel */;

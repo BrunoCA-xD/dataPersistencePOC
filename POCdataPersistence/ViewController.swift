@@ -38,8 +38,7 @@ class ViewController: UIViewController {
             }
         }else {
             if operation == 0 {
-               let entityDescription = NSEntityDescription.entity(forEntityName: "Mandala", in: CoreDataDAO.shared.persistentContainer.viewContext)
-                let mandala = Mandala(entity: entityDescription!, insertInto: nil)
+                let mandala = Mandala()
                 mandala.name = "Giovanni"
                 mandala.imc = 15.45
                 mandala.activityLevel  = "Pouco ativo"
@@ -51,7 +50,9 @@ class ViewController: UIViewController {
                     var list: [Mandala] = []
                     list = try CoreDataDAO.shared.persistentContainer.viewContext.fetch(Mandala.fetchRequest())
                     
-                    print(list.first?.name)
+                    list.forEach { (element) in
+                        print(element.name)
+                    }
                     
                 } catch  {
                     print(error)
