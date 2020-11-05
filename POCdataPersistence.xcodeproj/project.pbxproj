@@ -14,6 +14,8 @@
 		56B1337325533645001575B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56B1337225533645001575B5 /* Assets.xcassets */; };
 		56B1337625533645001575B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56B1337425533645001575B5 /* LaunchScreen.storyboard */; };
 		56B1338225533707001575B5 /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B1338125533707001575B5 /* Form.swift */; };
+		56FCF32F2554783500B2A9CC /* CoreDataDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FCF32E2554783400B2A9CC /* CoreDataDAO.swift */; };
+		56FCF33325547C7900B2A9CC /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD412CDE25546654001D1CE3 /* CoreData.framework */; };
 		AD412CE225546693001D1CE3 /* POCdataPersistence.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AD412CE025546693001D1CE3 /* POCdataPersistence.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +29,7 @@
 		56B1337525533645001575B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56B1337725533645001575B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56B1338125533707001575B5 /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
+		56FCF32E2554783400B2A9CC /* CoreDataDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataDAO.swift; sourceTree = "<group>"; };
 		AD412CDE25546654001D1CE3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		AD412CE125546693001D1CE3 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -36,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56FCF33325547C7900B2A9CC /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +66,7 @@
 		56B1336825533643001575B5 /* POCdataPersistence */ = {
 			isa = PBXGroup;
 			children = (
+				56FCF32E2554783400B2A9CC /* CoreDataDAO.swift */,
 				56B1336925533643001575B5 /* AppDelegate.swift */,
 				56B1336B25533643001575B5 /* SceneDelegate.swift */,
 				56B1336D25533643001575B5 /* ViewController.swift */,
@@ -158,6 +163,7 @@
 				AD412CE225546693001D1CE3 /* POCdataPersistence.xcdatamodeld in Sources */,
 				56B1336A25533643001575B5 /* AppDelegate.swift in Sources */,
 				56B1336C25533643001575B5 /* SceneDelegate.swift in Sources */,
+				56FCF32F2554783500B2A9CC /* CoreDataDAO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +311,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W7GK3PM9D9;
+				DEVELOPMENT_TEAM = GJUSD98938;
 				INFOPLIST_FILE = POCdataPersistence/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -325,7 +331,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W7GK3PM9D9;
+				DEVELOPMENT_TEAM = GJUSD98938;
 				INFOPLIST_FILE = POCdataPersistence/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
