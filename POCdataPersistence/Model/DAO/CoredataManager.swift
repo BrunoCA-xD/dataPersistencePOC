@@ -1,5 +1,5 @@
 //
-//  CoreData.swift
+//  CoredataManager.swift
 //  HabitMaker
 //
 //  Created by Bruno Cardoso Ambrosio on 23/04/20.
@@ -9,11 +9,10 @@
 import Foundation
 import CoreData
 
-class CoreDataDAO {
+class CoredataManager {
     
-    
-    /// The shared CoreDataDAO for process
-    static let shared = CoreDataDAO()
+    /// The shared CoredataManager for process
+    static let shared = CoredataManager()
     
     private init() {}
     
@@ -40,12 +39,5 @@ class CoreDataDAO {
                 fatalError("Unresolved error \(error) \(error.userInfo)")
             }
         }
-    }
-    
-    /// Generic method to delete a NSManagedObject
-    /// - Parameter item: an item to be removed
-    func delete(item: NSManagedObject) {
-        persistentContainer.viewContext.delete(item)
-        saveContext()
     }
 }

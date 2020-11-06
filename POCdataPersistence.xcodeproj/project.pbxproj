@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		560214152555CEC000F2A265 /* POCdataPersistence.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 560214132555CEC000F2A265 /* POCdataPersistence.xcdatamodeld */; };
 		562D2B912554816000F8E651 /* Mandala+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562D2B8F2554816000F8E651 /* Mandala+CoreDataClass.swift */; };
 		562D2B922554816000F8E651 /* Mandala+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562D2B902554816000F8E651 /* Mandala+CoreDataProperties.swift */; };
 		56B1336A25533643001575B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B1336925533643001575B5 /* AppDelegate.swift */; };
@@ -15,16 +16,17 @@
 		56B1337125533643001575B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56B1336F25533643001575B5 /* Main.storyboard */; };
 		56B1337325533645001575B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56B1337225533645001575B5 /* Assets.xcassets */; };
 		56B1337625533645001575B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56B1337425533645001575B5 /* LaunchScreen.storyboard */; };
-		56B1338225533707001575B5 /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B1338125533707001575B5 /* Form.swift */; };
-		56FCF32F2554783500B2A9CC /* CoreDataDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FCF32E2554783400B2A9CC /* CoreDataDAO.swift */; };
+		56D8722B2555C4A000BCB1D1 /* MandalaVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D8722A2555C4A000BCB1D1 /* MandalaVO.swift */; };
+		56D872332555C52E00BCB1D1 /* MandalaDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D872322555C52E00BCB1D1 /* MandalaDAO.swift */; };
+		56D8723B2555C67C00BCB1D1 /* GenericsDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D8723A2555C67C00BCB1D1 /* GenericsDAO.swift */; };
+		56FCF32F2554783500B2A9CC /* CoredataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FCF32E2554783400B2A9CC /* CoredataManager.swift */; };
 		56FCF33325547C7900B2A9CC /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD412CDE25546654001D1CE3 /* CoreData.framework */; };
-		AD412CE225546693001D1CE3 /* POCdataPersistence.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AD412CE025546693001D1CE3 /* POCdataPersistence.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		560214142555CEC000F2A265 /* POCdataPersistence.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = POCdataPersistence.xcdatamodel; sourceTree = "<group>"; };
 		562D2B8F2554816000F8E651 /* Mandala+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mandala+CoreDataClass.swift"; sourceTree = "<group>"; };
 		562D2B902554816000F8E651 /* Mandala+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mandala+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		562D2B982554857200F8E651 /* Model 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 2.xcdatamodel"; sourceTree = "<group>"; };
 		56B1336625533643001575B5 /* POCdataPersistence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = POCdataPersistence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56B1336925533643001575B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56B1336B25533643001575B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,10 +35,11 @@
 		56B1337225533645001575B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56B1337525533645001575B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56B1337725533645001575B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		56B1338125533707001575B5 /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
-		56FCF32E2554783400B2A9CC /* CoreDataDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataDAO.swift; sourceTree = "<group>"; };
+		56D8722A2555C4A000BCB1D1 /* MandalaVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MandalaVO.swift; sourceTree = "<group>"; };
+		56D872322555C52E00BCB1D1 /* MandalaDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MandalaDAO.swift; sourceTree = "<group>"; };
+		56D8723A2555C67C00BCB1D1 /* GenericsDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericsDAO.swift; sourceTree = "<group>"; };
+		56FCF32E2554783400B2A9CC /* CoredataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoredataManager.swift; sourceTree = "<group>"; };
 		AD412CDE25546654001D1CE3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		AD412CE125546693001D1CE3 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,9 +74,7 @@
 		56B1336825533643001575B5 /* POCdataPersistence */ = {
 			isa = PBXGroup;
 			children = (
-				562D2B8F2554816000F8E651 /* Mandala+CoreDataClass.swift */,
-				562D2B902554816000F8E651 /* Mandala+CoreDataProperties.swift */,
-				56FCF32E2554783400B2A9CC /* CoreDataDAO.swift */,
+				56D872252555C41A00BCB1D1 /* Model */,
 				56B1336925533643001575B5 /* AppDelegate.swift */,
 				56B1336B25533643001575B5 /* SceneDelegate.swift */,
 				56B1336D25533643001575B5 /* ViewController.swift */,
@@ -81,10 +82,38 @@
 				56B1337225533645001575B5 /* Assets.xcassets */,
 				56B1337425533645001575B5 /* LaunchScreen.storyboard */,
 				56B1337725533645001575B5 /* Info.plist */,
-				56B1338125533707001575B5 /* Form.swift */,
-				AD412CE025546693001D1CE3 /* POCdataPersistence.xcdatamodeld */,
+				560214132555CEC000F2A265 /* POCdataPersistence.xcdatamodeld */,
 			);
 			path = POCdataPersistence;
+			sourceTree = "<group>";
+		};
+		56D872252555C41A00BCB1D1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				56D872272555C44500BCB1D1 /* DAO */,
+				56D872282555C48B00BCB1D1 /* CoreDataModel */,
+				56D8722A2555C4A000BCB1D1 /* MandalaVO.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		56D872272555C44500BCB1D1 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				56D8723A2555C67C00BCB1D1 /* GenericsDAO.swift */,
+				56FCF32E2554783400B2A9CC /* CoredataManager.swift */,
+				56D872322555C52E00BCB1D1 /* MandalaDAO.swift */,
+			);
+			path = DAO;
+			sourceTree = "<group>";
+		};
+		56D872282555C48B00BCB1D1 /* CoreDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				562D2B8F2554816000F8E651 /* Mandala+CoreDataClass.swift */,
+				562D2B902554816000F8E651 /* Mandala+CoreDataProperties.swift */,
+			);
+			path = CoreDataModel;
 			sourceTree = "<group>";
 		};
 		AD412CDD25546653001D1CE3 /* Frameworks */ = {
@@ -168,11 +197,13 @@
 				562D2B922554816000F8E651 /* Mandala+CoreDataProperties.swift in Sources */,
 				562D2B912554816000F8E651 /* Mandala+CoreDataClass.swift in Sources */,
 				56B1336E25533643001575B5 /* ViewController.swift in Sources */,
-				56B1338225533707001575B5 /* Form.swift in Sources */,
-				AD412CE225546693001D1CE3 /* POCdataPersistence.xcdatamodeld in Sources */,
+				56D872332555C52E00BCB1D1 /* MandalaDAO.swift in Sources */,
 				56B1336A25533643001575B5 /* AppDelegate.swift in Sources */,
+				56D8723B2555C67C00BCB1D1 /* GenericsDAO.swift in Sources */,
+				560214152555CEC000F2A265 /* POCdataPersistence.xcdatamodeld in Sources */,
 				56B1336C25533643001575B5 /* SceneDelegate.swift in Sources */,
-				56FCF32F2554783500B2A9CC /* CoreDataDAO.swift in Sources */,
+				56D8722B2555C4A000BCB1D1 /* MandalaVO.swift in Sources */,
+				56FCF32F2554783500B2A9CC /* CoredataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,13 +409,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		AD412CE025546693001D1CE3 /* POCdataPersistence.xcdatamodeld */ = {
+		560214132555CEC000F2A265 /* POCdataPersistence.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				562D2B982554857200F8E651 /* Model 2.xcdatamodel */,
-				AD412CE125546693001D1CE3 /* Model.xcdatamodel */,
+				560214142555CEC000F2A265 /* POCdataPersistence.xcdatamodel */,
 			);
-			currentVersion = AD412CE125546693001D1CE3 /* Model.xcdatamodel */;
+			currentVersion = 560214142555CEC000F2A265 /* POCdataPersistence.xcdatamodel */;
 			path = POCdataPersistence.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

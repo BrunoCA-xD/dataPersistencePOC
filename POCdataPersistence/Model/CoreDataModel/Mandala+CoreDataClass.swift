@@ -13,7 +13,7 @@ import CoreData
 public class Mandala: NSManagedObject {
 
     convenience init(){
-        let managedObjectContext: NSManagedObjectContext = CoreDataDAO.shared.persistentContainer.viewContext
+        let managedObjectContext: NSManagedObjectContext = CoredataManager.shared.persistentContainer.viewContext
         let entityDescription = NSEntityDescription.entity(forEntityName: "Mandala", in: managedObjectContext)
         
         self.init(entity: entityDescription!, insertInto: nil)
