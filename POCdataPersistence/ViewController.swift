@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     var manager = JSONManager<Form>()
     override func viewDidLoad() {
         super.viewDidLoad()
-        let form = Form(name: "Bruno", imc: 25.45, activitylevel: "Sedentário")
+        let form = Form(name: "Giovani", imc: 24.16, activitylevel: "Ativo")
         manager.saveJSON(json: form,fileName: "/mandala.json")
         if let reading = manager.getJSON(fileName: "/mandala.json"){
             print(reading)
