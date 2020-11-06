@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class JSONManager{
+class JSONManager<Entity> where Entity:Codable{
     private func getURL(fileName: String) -> URL?{
         do {
             var url = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
@@ -20,7 +20,7 @@ class JSONManager{
         }
     }
     
-    func saveJSON(json: Form, fileName: String){
+    func saveJSON(json: Entity, fileName: String){
         do {
             if let url = getURL(fileName: fileName) {
                 let data = try JSONEncoder().encode(json)
@@ -35,16 +35,16 @@ class JSONManager{
         }
     }
     
-    func getJSON(fileName: String) -> Form?{
+    func getJSON(fileName: String) -> Entity?{
         do {
             if let url = getURL(fileName: fileName){
                 let file = NSDictionary(contentsOf: url)
                 // LER ARQUIVO
                 let readJSON = try JSONSerialization.data(withJSONObject: file!, options: [])
-                let decoded = try JSONDecoder().decode(Form.self, from: readJSON)
+                let decoded = try JSONDecoder().decode(Entity.self, from: readJSON)
                 return decoded
             }else{
-                print("failed generating url")
+                print("Failed generating url")
                 return nil
             }
         } catch {
