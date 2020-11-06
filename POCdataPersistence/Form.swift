@@ -11,4 +11,5 @@ struct Form: Codable {
     var name: String
     var imc: Float
     var activitylevel: String
+    
 }

@@ -14,7 +14,7 @@
 		56B1337325533645001575B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56B1337225533645001575B5 /* Assets.xcassets */; };
 		56B1337625533645001575B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56B1337425533645001575B5 /* LaunchScreen.storyboard */; };
 		56B1338225533707001575B5 /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B1338125533707001575B5 /* Form.swift */; };
-		AD412CE225546693001D1CE3 /* POCdataPersistence.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AD412CE025546693001D1CE3 /* POCdataPersistence.xcdatamodeld */; };
+		AD412D3B2555C110001D1CE3 /* JSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD412D3A2555C110001D1CE3 /* JSONManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +27,7 @@
 		56B1337525533645001575B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56B1337725533645001575B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56B1338125533707001575B5 /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
-		AD412CDE25546654001D1CE3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		AD412CE125546693001D1CE3 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		AD412D3A2555C110001D1CE3 /* JSONManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +46,6 @@
 			children = (
 				56B1336825533643001575B5 /* POCdataPersistence */,
 				56B1336725533643001575B5 /* Products */,
-				AD412CDD25546653001D1CE3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,17 +68,9 @@
 				56B1337425533645001575B5 /* LaunchScreen.storyboard */,
 				56B1337725533645001575B5 /* Info.plist */,
 				56B1338125533707001575B5 /* Form.swift */,
-				AD412CE025546693001D1CE3 /* POCdataPersistence.xcdatamodeld */,
+				AD412D3A2555C110001D1CE3 /* JSONManager.swift */,
 			);
 			path = POCdataPersistence;
-			sourceTree = "<group>";
-		};
-		AD412CDD25546653001D1CE3 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				AD412CDE25546654001D1CE3 /* CoreData.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,8 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				56B1336E25533643001575B5 /* ViewController.swift in Sources */,
+				AD412D3B2555C110001D1CE3 /* JSONManager.swift in Sources */,
 				56B1338225533707001575B5 /* Form.swift in Sources */,
-				AD412CE225546693001D1CE3 /* POCdataPersistence.xcdatamodeld in Sources */,
 				56B1336A25533643001575B5 /* AppDelegate.swift in Sources */,
 				56B1336C25533643001575B5 /* SceneDelegate.swift in Sources */,
 			);
@@ -361,19 +351,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		AD412CE025546693001D1CE3 /* POCdataPersistence.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				AD412CE125546693001D1CE3 /* Model.xcdatamodel */,
-			);
-			currentVersion = AD412CE125546693001D1CE3 /* Model.xcdatamodel */;
-			path = POCdataPersistence.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 56B1335E25533643001575B5 /* Project object */;
 }
