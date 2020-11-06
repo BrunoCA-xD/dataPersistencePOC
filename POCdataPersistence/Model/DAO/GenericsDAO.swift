@@ -16,7 +16,7 @@ protocol GenericsDAO{
 
     func listAll() -> [ManagedEntity]
     func delete(entity: ManagedEntity)
-    func save()
+    func saveOrUpdate(_ entity: ManagedEntity)
 }
 
 extension GenericsDAO {
@@ -39,10 +39,14 @@ extension GenericsDAO {
     
     func delete(entity: ManagedEntity) {
         context.delete(entity)
-        save()
+        CoredataManager.shared.saveContext()
     }
     
-    func save() {
+    func saveOrUpdate(_ entity: ManagedEntity){
+        if entity.managedObjectContext == nil {
+            context.insert(entity)
+        }
+        
         CoredataManager.shared.saveContext()
     }
 }
