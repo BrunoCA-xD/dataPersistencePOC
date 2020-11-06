@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		560214212555D87200F2A265 /* POCdataPersistence.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5602141F2555D87200F2A265 /* POCdataPersistence.xcdatamodeld */; };
+		560214292555DD2600F2A265 /* MandalaModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 560214272555DD2600F2A265 /* MandalaModel.xcdatamodeld */; };
 		562D2B912554816000F8E651 /* Mandala+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562D2B8F2554816000F8E651 /* Mandala+CoreDataClass.swift */; };
 		562D2B922554816000F8E651 /* Mandala+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562D2B902554816000F8E651 /* Mandala+CoreDataProperties.swift */; };
 		56B1336A25533643001575B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B1336925533643001575B5 /* AppDelegate.swift */; };
@@ -24,7 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		560214202555D87200F2A265 /* POCdataPersistence.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = POCdataPersistence.xcdatamodel; sourceTree = "<group>"; };
+		560214282555DD2600F2A265 /* MandalaModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MandalaModel.xcdatamodel; sourceTree = "<group>"; };
 		562D2B8F2554816000F8E651 /* Mandala+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mandala+CoreDataClass.swift"; sourceTree = "<group>"; };
 		562D2B902554816000F8E651 /* Mandala+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mandala+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		56B1336625533643001575B5 /* POCdataPersistence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = POCdataPersistence.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,7 +74,6 @@
 		56B1336825533643001575B5 /* POCdataPersistence */ = {
 			isa = PBXGroup;
 			children = (
-				5602141F2555D87200F2A265 /* POCdataPersistence.xcdatamodeld */,
 				56D872252555C41A00BCB1D1 /* Model */,
 				56B1336925533643001575B5 /* AppDelegate.swift */,
 				56B1336B25533643001575B5 /* SceneDelegate.swift */,
@@ -83,6 +82,7 @@
 				56B1337225533645001575B5 /* Assets.xcassets */,
 				56B1337425533645001575B5 /* LaunchScreen.storyboard */,
 				56B1337725533645001575B5 /* Info.plist */,
+				560214272555DD2600F2A265 /* MandalaModel.xcdatamodeld */,
 			);
 			path = POCdataPersistence;
 			sourceTree = "<group>";
@@ -197,10 +197,10 @@
 				562D2B922554816000F8E651 /* Mandala+CoreDataProperties.swift in Sources */,
 				562D2B912554816000F8E651 /* Mandala+CoreDataClass.swift in Sources */,
 				56B1336E25533643001575B5 /* ViewController.swift in Sources */,
+				560214292555DD2600F2A265 /* MandalaModel.xcdatamodeld in Sources */,
 				56D872332555C52E00BCB1D1 /* MandalaDAO.swift in Sources */,
 				56B1336A25533643001575B5 /* AppDelegate.swift in Sources */,
 				56D8723B2555C67C00BCB1D1 /* GenericsDAO.swift in Sources */,
-				560214212555D87200F2A265 /* POCdataPersistence.xcdatamodeld in Sources */,
 				56B1336C25533643001575B5 /* SceneDelegate.swift in Sources */,
 				56D8722B2555C4A000BCB1D1 /* MandalaVO.swift in Sources */,
 				56FCF32F2554783500B2A9CC /* CoredataManager.swift in Sources */,
@@ -409,13 +409,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		5602141F2555D87200F2A265 /* POCdataPersistence.xcdatamodeld */ = {
+		560214272555DD2600F2A265 /* MandalaModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				560214202555D87200F2A265 /* POCdataPersistence.xcdatamodel */,
+				560214282555DD2600F2A265 /* MandalaModel.xcdatamodel */,
 			);
-			currentVersion = 560214202555D87200F2A265 /* POCdataPersistence.xcdatamodel */;
-			path = POCdataPersistence.xcdatamodeld;
+			currentVersion = 560214282555DD2600F2A265 /* MandalaModel.xcdatamodel */;
+			path = MandalaModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

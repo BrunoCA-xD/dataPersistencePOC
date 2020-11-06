@@ -18,7 +18,7 @@ class CoredataManager {
     
     /// The coredata container where the app is persisting
     lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "POCdataPersistence")
+        let container = NSPersistentContainer(name: "MandalaModel")
         container.loadPersistentStores { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error) \(error.userInfo)")
