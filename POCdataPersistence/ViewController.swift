@@ -14,29 +14,34 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        let operation = 1 // 0 - salvar 1 - puxar
-        if operation == 0 {
-            let mandala = Mandala()
-            mandala.name = "User 1"
-            mandala.imc = 15.45
-            mandala.activityLevel  = "Pouco ativo"
-            mandalaDAO.saveOrUpdate(mandala)
-        }else {
-            do {
-                let list: [Mandala] = mandalaDAO.listAll()
-                
-                list.forEach { (entity) in
-                    print(entity.name)
+        DispatchQueue(label: "t1").async { [self] in
+            let list: [Mandala] = mandalaDAO.listAll()
+            let mandala = list.first!
+            DispatchQueue(label: "t3").async {
+                mandala.name = "t10 editing"
+                do {
+                    try mandalaDAO.saveOrUpdate(mandala)
+                } catch let error {
+                        print("puxar do banco e tentar salvar de novo \\t3")
                 }
-                
-            } catch  {
-                print(error)
+                print("t3 -> \(Date())")
             }
+            DispatchQueue(label: "t4").async {
+                mandala.name = "t8 editing"
+                do {
+                    try mandalaDAO.saveOrUpdate(mandala)
+                } catch let error {
+                        print("puxar do banco e tentar salvar de novo \\t4")
+                }
+                print("t4 -> \(Date())")
+            }
+            print("t1 -> \(Date())")
         }
-        
-        
-        
+        DispatchQueue(label: "t2").async { [self] in
+            let list: [Mandala] = mandalaDAO.listAll()
+            list.forEach { print($0.name)}
+            print("t2 -> \(Date())")
+        }
     }
     
 }

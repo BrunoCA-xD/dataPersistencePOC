@@ -15,8 +15,8 @@ protocol GenericsDAO{
     var context: NSManagedObjectContext { get }
 
     func listAll() -> [ManagedEntity]
-    func delete(entity: ManagedEntity)
-    func saveOrUpdate(_ entity: ManagedEntity)
+    func delete(entity: ManagedEntity) throws
+    func saveOrUpdate(_ entity: ManagedEntity) throws
 }
 
 extension GenericsDAO {
@@ -37,16 +37,16 @@ extension GenericsDAO {
         return lst
     }
     
-    func delete(entity: ManagedEntity) {
+    func delete(entity: ManagedEntity) throws{
         context.delete(entity)
-        CoredataManager.shared.saveContext()
+        try CoredataManager.shared.saveContext()
     }
     
-    func saveOrUpdate(_ entity: ManagedEntity){
+    func saveOrUpdate(_ entity: ManagedEntity) throws{
         if entity.managedObjectContext == nil {
             context.insert(entity)
         }
         
-        CoredataManager.shared.saveContext()
+        try CoredataManager.shared.saveContext()
     }
 }

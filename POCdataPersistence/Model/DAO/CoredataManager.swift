@@ -29,15 +29,10 @@ class CoredataManager {
     }()
     
     /// Generic method to save the context
-    func saveContext() {
+    func saveContext() throws {
         let context = persistentContainer.viewContext
         if context.hasChanges {
-            do {
-                try context.save()
-            } catch {
-                let error = error as NSError
-                fatalError("Unresolved error \(error) \(error.userInfo)")
-            }
+            try context.save()
         }
     }
 }
