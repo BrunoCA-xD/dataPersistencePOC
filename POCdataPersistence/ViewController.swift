@@ -14,6 +14,48 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    @IBAction func save(_ sender: Any) {
+        let mandala = Mandala()
+        mandala.name = "Bruno"
+        mandala.imc = 20
+        mandala.activityLevel = "Sedentário"
+        do {
+            try mandalaDAO.saveOrUpdate(mandala)
+        } catch (let error) {
+            print(error.localizedDescription)
+        }
+    }
+    
+    @IBAction func crashTest(_ sender: Any) {
+        simultaneosUpdate()
+    }
+    @IBAction func test(_ sender: Any) {
+        DispatchQueue.main.async { [self] in
+            let list: [Mandala] = mandalaDAO.listAll()
+            let mandala = list.randomElement()!
+            DispatchQueue.main.async {
+                let intVal = String(describing: Int.random(in: 0..<100))
+                mandala.name = "\(intVal) dasdas"
+                do {
+                    try mandalaDAO.saveOrUpdate(mandala)
+                } catch let error {
+                    print("error -> " + error.localizedDescription)
+                }
+                print("t3 -> \(Date())")
+            }
+            print("t1 -> \(Date())")
+        }
+        DispatchQueue.main.async { [self] in
+            let list: [Mandala] = mandalaDAO.listAll()
+            list.forEach { print($0.name)}
+            print("t2 -> \(Date())")
+        }
+    }
+    
+    
+    func simultaneosUpdate() {
         DispatchQueue(label: "t1").async { [self] in
             let list: [Mandala] = mandalaDAO.listAll()
             let mandala = list.first!
@@ -22,7 +64,7 @@ class ViewController: UIViewController {
                 do {
                     try mandalaDAO.saveOrUpdate(mandala)
                 } catch let error {
-                        print("puxar do banco e tentar salvar de novo \\t3")
+                    print("puxar do banco e tentar salvar de novo \\t3")
                 }
                 print("t3 -> \(Date())")
             }
@@ -31,7 +73,7 @@ class ViewController: UIViewController {
                 do {
                     try mandalaDAO.saveOrUpdate(mandala)
                 } catch let error {
-                        print("puxar do banco e tentar salvar de novo \\t4")
+                    print("puxar do banco e tentar salvar de novo \\t4")
                 }
                 print("t4 -> \(Date())")
             }
@@ -43,5 +85,4 @@ class ViewController: UIViewController {
             print("t2 -> \(Date())")
         }
     }
-    
 }
