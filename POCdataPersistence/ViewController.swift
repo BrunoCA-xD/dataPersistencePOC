@@ -14,31 +14,24 @@ class ViewController: UIViewController {
         
     }
     @IBAction func queries(_ sender: Any) {
-        DispatchQueue.main.async { [self] in
-            if var reading = manager.getJSON(fileName: "/mandala.json"){
-                DispatchQueue(label: "t2").async { [self] in
-                    reading.imc = 18.0
-                    manager.saveJSON(json: reading,fileName: "/mandala.json")
-                }
-                DispatchQueue(label: "t4").async { [self] in
-                    reading.imc = 20.0
-                    manager.saveJSON(json: reading,fileName: "/mandala.json")
-                }
-                
+        manager.getJSON(fileName: "/mandala.json") {mandala, _ in
+            if var mandala = mandala {
+                mandala.imc = 234
+                self.manager.saveJSON(json: mandala, fileName: "/mandala.json")
+                mandala.imc = 120
+                self.manager.saveJSON(json: mandala,fileName: "/mandala.json")
             }
         }
-        
-        DispatchQueue.main.async { [self] in
-            if let reading = manager.getJSON(fileName: "/mandala.json"){
-                print(reading)
-            }
+        manager.getJSON(fileName: "/mandala.json"){
+            mandala, error in
+            print(mandala)
         }
     }
     @IBAction func save(_ sender: Any) {
         let form = Form(name: "Giovani", imc: 24.16, activitylevel: "Ativo")
         manager.saveJSON(json: form,fileName: "/mandala.json")
-        if let reading = manager.getJSON(fileName: "/mandala.json"){
-            print(reading)
+        manager.getJSON(fileName: "/mandala.json"){ mandala, error in
+            print(mandala)
         }
     }
 }

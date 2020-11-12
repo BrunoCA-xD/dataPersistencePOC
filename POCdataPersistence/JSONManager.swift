@@ -21,35 +21,59 @@ class JSONManager<Entity> where Entity:Codable{
     }
     
     func saveJSON(json: Entity, fileName: String){
-        do {
-            if let url = getURL(fileName: fileName) {
-                let data = try JSONEncoder().encode(json)
-                let myJson = try JSONSerialization.jsonObject(with: data, options: []) as! NSDictionary
-                // SALVAR ARQUIVO
-                myJson.write(to: url, atomically: true)
-            }else{
-                print("Failed generating url")
+        let block = JSONOperation(block: {[self] in
+            do {
+                if let url = getURL(fileName: fileName) {
+                    let data = try JSONEncoder().encode(json)
+                    let myJson = try JSONSerialization.jsonObject(with: data, options: []) as! NSDictionary
+                    // SALVAR ARQUIVO
+                    try myJson.write(to: url)
+                }else{
+                    print("Failed generating url")
+                }
+            } catch {
+                print(error)
             }
-        } catch {
-            print(error)
-        }
+        })
+        block.queuePriority = .veryHigh
+        block.kind = .save
+        
+        QueueManager.sharedInstance.executeBlock(block, queueType: .serial)
+        
     }
     
-    func getJSON(fileName: String) -> Entity?{
-        do {
-            if let url = getURL(fileName: fileName){
-                let file = NSDictionary(contentsOf: url)
-                // LER ARQUIVO
-                let readJSON = try JSONSerialization.data(withJSONObject: file!, options: [])
-                let decoded = try JSONDecoder().decode(Entity.self, from: readJSON)
-                return decoded
-            }else{
-                print("Failed generating url")
-                return nil
+    func getJSON(fileName: String, completion: @escaping (Entity?, Error?) ->()){
+        let block = JSONOperation(block: { [self] in
+            do {
+                if let url = getURL(fileName: fileName){
+                    let file = NSDictionary(contentsOf: url)
+                    // LER ARQUIVO
+                    let readJSON = try JSONSerialization.data(withJSONObject: file!, options: [])
+                    let decoded = try JSONDecoder().decode(Entity.self, from: readJSON)
+                    completion(decoded, nil)
+                }else{
+                    print("Failed generating url")
+                    completion(nil,nil)
+                }
+            } catch {
+                print(error)
+                completion(nil, error)
             }
-        } catch {
-            print(error)
-            return nil
+        })
+        block.queuePriority = .veryLow
+        block.kind = .read
+        if let op = QueueManager.sharedInstance.getQueue(.serial).operations.first(where: {($0 as? JSONOperation)?.kind == .save}){
+            block.addDependency(op)
         }
+        QueueManager.sharedInstance.executeBlock(block, queueType: .serial)
     }
+}
+
+
+enum JSONOperationKind {
+    case save
+    case read
+}
+class JSONOperation: BlockOperation{
+    var kind: JSONOperationKind = .save
 }
