@@ -15,6 +15,7 @@
 		56B1337625533645001575B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56B1337425533645001575B5 /* LaunchScreen.storyboard */; };
 		56B1338225533707001575B5 /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B1338125533707001575B5 /* Form.swift */; };
 		AD412D3B2555C110001D1CE3 /* JSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD412D3A2555C110001D1CE3 /* JSONManager.swift */; };
+		ADE66F5C255C762200F83C90 /* QueueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE66F5B255C762200F83C90 /* QueueManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		56B1337725533645001575B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56B1338125533707001575B5 /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
 		AD412D3A2555C110001D1CE3 /* JSONManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManager.swift; sourceTree = "<group>"; };
+		ADE66F5B255C762200F83C90 /* QueueManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				56B1337725533645001575B5 /* Info.plist */,
 				56B1338125533707001575B5 /* Form.swift */,
 				AD412D3A2555C110001D1CE3 /* JSONManager.swift */,
+				ADE66F5B255C762200F83C90 /* QueueManager.swift */,
 			);
 			path = POCdataPersistence;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 				56B1336E25533643001575B5 /* ViewController.swift in Sources */,
 				AD412D3B2555C110001D1CE3 /* JSONManager.swift in Sources */,
 				56B1338225533707001575B5 /* Form.swift in Sources */,
+				ADE66F5C255C762200F83C90 /* QueueManager.swift in Sources */,
 				56B1336A25533643001575B5 /* AppDelegate.swift in Sources */,
 				56B1336C25533643001575B5 /* SceneDelegate.swift in Sources */,
 			);

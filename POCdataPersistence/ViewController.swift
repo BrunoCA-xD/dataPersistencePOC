@@ -11,11 +11,9 @@ class ViewController: UIViewController {
     var manager = JSONManager<Form>()
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let form = Form(name: "Giovani", imc: 24.16, activitylevel: "Ativo")
-//        manager.saveJSON(json: form,fileName: "/mandala.json")
-//        if let reading = manager.getJSON(fileName: "/mandala.json"){
-//            print(reading)
-//        }
+        
+    }
+    @IBAction func queries(_ sender: Any) {
         DispatchQueue.main.async { [self] in
             if var reading = manager.getJSON(fileName: "/mandala.json"){
                 DispatchQueue(label: "t2").async { [self] in
@@ -34,6 +32,13 @@ class ViewController: UIViewController {
             if let reading = manager.getJSON(fileName: "/mandala.json"){
                 print(reading)
             }
+        }
+    }
+    @IBAction func save(_ sender: Any) {
+        let form = Form(name: "Giovani", imc: 24.16, activitylevel: "Ativo")
+        manager.saveJSON(json: form,fileName: "/mandala.json")
+        if let reading = manager.getJSON(fileName: "/mandala.json"){
+            print(reading)
         }
     }
 }
