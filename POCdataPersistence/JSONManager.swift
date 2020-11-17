@@ -20,7 +20,7 @@ class JSONManager<Entity> where Entity:Codable{
         }
     }
     
-    func saveJSON(json: Entity, fileName: String){
+    func saveJSON(json: Entity, fileName: String, completion: ((Entity?, Error?) ->())? = nil){
         let block = JSONOperation(block: {[self] in
             do {
                 if let url = getURL(fileName: fileName) {
@@ -28,6 +28,7 @@ class JSONManager<Entity> where Entity:Codable{
                     let myJson = try JSONSerialization.jsonObject(with: data, options: []) as! NSDictionary
                     // SALVAR ARQUIVO
                     try myJson.write(to: url)
+                    completion?(json,nil)
                 }else{
                     print("Failed generating url")
                 }
